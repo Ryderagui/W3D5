@@ -70,23 +70,23 @@ class PolyTreeNode
     attr_reader :children, :parent, :value
 end
 
-f = PolyTreeNode.new('F')
-e = PolyTreeNode.new('E')
-d = PolyTreeNode.new('D')
-c = PolyTreeNode.new('C', [f])
-b = PolyTreeNode.new('B', [d, e])
-a = PolyTreeNode.new('A', [b, c])
+# f = PolyTreeNode.new('F')
+# e = PolyTreeNode.new('E')
+# d = PolyTreeNode.new('D')
+# c = PolyTreeNode.new('C', [f])
+# b = PolyTreeNode.new('B', [d, e])
+# a = PolyTreeNode.new('A', [b, c])
 
-p a.dfs('A').value
-p a.dfs('B').value
-p a.dfs('C').value
-p a.dfs('D').value
-p a.dfs('E').value
-p a.dfs('F').value
+# p a.dfs('A').value
+# p a.dfs('B').value
+# p a.dfs('C').value
+# p a.dfs('D').value
+# p a.dfs('E').value
+# p a.dfs('F').value
 
-p a.bfs('A').value
-p a.bfs('B').value
-p a.bfs('C').value
-p a.bfs('D').value
-p a.bfs('E').value
-p a.bfs('F').value
+# p a.bfs('A').value
+# p a.bfs('B').value
+# p a.bfs('C').value
+# p a.bfs('D').value
+# p a.bfs('E').value
+# p a.bfs('F').value
