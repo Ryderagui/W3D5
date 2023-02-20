@@ -48,7 +48,7 @@ class KnightPathFinder
             new_move_positions(first.value).each do |pos|
                 new_node = PolyTreeNode.new(pos)
                 queue << new_node
-                p 'row:' + new_node.value[0].to_s + 'col: ' + new_node.value[1].to_s
+                # p 'row:' + new_node.value[0].to_s + 'col: ' + new_node.value[1].to_s
                 new_node.parent = first
             end
         end
@@ -56,6 +56,24 @@ class KnightPathFinder
     end
 
     def find_path(end_pos)
+        end_node = root_node.bfs(end_pos)
+        trace_path_back(end_node)
     end
+    
+    def trace_path_back(node)
+        array_pos = []
+        current_node = node
+        while current_node != root_node
+            array_pos.unshift(current_node.value)
+            current_node = current_node.parent 
+            if current_node == root_node
+                array_pos.unshift(current_node.value)
+            end
+        end
+        array_pos
+    end
+
+
+
 
 end

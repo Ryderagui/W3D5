@@ -47,7 +47,7 @@ class PolyTreeNode
         return self if target_value == self.value
 
         self.children.each do |child|
-            puts child.value
+            # puts child.value
             search = child.dfs(target_value)
             return search if search != nil
         end
@@ -59,7 +59,7 @@ class PolyTreeNode
         queue << self
         until queue.empty?
             first = queue.shift
-            puts first.value
+            # puts first.value
             return first if first.value == target_value
             queue.concat(first.children)
         end
